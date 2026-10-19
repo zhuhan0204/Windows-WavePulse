@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>BluetoothBatteryMonitor</RootNamespace>
+    <AssemblyName>WavePulse 无线设备电量助手.Core</AssemblyName>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <InformationalVersion>0.1-net48</InformationalVersion>
+    <Authors>yuban</Authors>
+    <Company>yuban</Company>
+    <Copyright>Copyright © 2026 yuban. All rights reserved.</Copyright>
+    <ApplicationManifest>..\app.manifest</ApplicationManifest>
+    <ApplicationIcon>..\assets\app-icon.ico</ApplicationIcon>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
+    <DebugSymbols Condition="'$(Configuration)' == 'Release'">false</DebugSymbols>
+    <OutputPath>..\bin\net48\$(Configuration)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net48" Version="1.0.3" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\src\**\*.cs" />
+    <Resource Include="..\assets\app-icon.png">
+      <Link>assets\app-icon.png</Link>
+    </Resource>
+  </ItemGroup>
+</Project>

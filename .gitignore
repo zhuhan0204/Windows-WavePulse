@@ -1,0 +1,28 @@
+# Build outputs, dependencies and private release staging
+bin/
+obj/
+release/
+artifacts/
+.tools/
+.vs/
+.idea/
+
+# Personal settings, diagnostics, runtime cache and vendor research
+**/data/
+**/.wavepulse-runtime/
+.test/
+*.log
+*.dmp
+/test-*.png
+
+# Local IDE files and credentials
+*.user
+*.suo
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+Thumbs.db
+Desktop.ini
